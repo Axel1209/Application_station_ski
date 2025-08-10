@@ -1,0 +1,50 @@
+.station-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.station-info h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.station-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.station-info ul li {
+  margin-bottom: 0.25rem;
+}
+
+.vote-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.vote-section h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.average-rating {
+  margin-top: 1rem;
+}
+
+.average-rating h4 {
+  font-size: 1em;
+  color: #555;
+}
+
+.average-rating p {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2c3e50;
+}

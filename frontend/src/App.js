@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Login from './components/Login';
 import FilterPanel from './components/FilterPanel';
 import StationList from './components/StationList';
 import initialStations from './data/stations';
@@ -27,6 +28,7 @@ function App() {
 
   const handleVote = (stationId, note) => {
     if (!selectedParticipant) {
+      // This check is now mostly for safety, as voting isn't possible without being logged in.
       alert('Veuillez sélectionner un participant pour voter.');
       return;
     }
@@ -46,6 +48,15 @@ function App() {
       station.distances.villeneuveSurBellot.km <= filters.distanceVilleneuveMax
     );
   });
+
+  if (!selectedParticipant) {
+    return (
+      <Login
+        participants={participants}
+        onParticipantChange={setSelectedParticipant}
+      />
+    );
+  }
 
   return (
     <div className="App">

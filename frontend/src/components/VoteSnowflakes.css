@@ -1,0 +1,27 @@
+.vote-snowflakes {
+  display: flex;
+  cursor: pointer;
+}
+
+.snowflake {
+  font-size: 1.5rem;
+  color: #d0d0d0;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.snowflake:hover {
+  transform: scale(1.2);
+}
+
+.vote-snowflakes:hover .snowflake {
+  color: #a7d8f0;
+}
+
+.vote-snowflakes .snowflake:hover ~ .snowflake {
+  color: #d0d0d0;
+}
+
+.snowflake.active,
+.vote-snowflakes:hover .snowflake.active ~ .snowflake {
+  color: #2980b9;
+}
